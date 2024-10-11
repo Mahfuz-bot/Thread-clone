@@ -1,0 +1,23 @@
+{
+  "name": "thread-clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "tsc-watch --onSuccess \"npm start\""
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "graphql": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.6.3"
+  }
+}
