@@ -1,9 +1,11 @@
-version: '3.4'
+# networks:
+#   my-network:
+#     driver: bridge
 
 services:
   postgres:
     container_name: threads-db
-    image: postgres
+    image: postgres:latest
     ports:
       - 5432:5432
     volumes:
@@ -12,7 +14,22 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: threads
       POSTGRES_DB: threads
-
+      POSTGRES_HOST_AUTH_METHOD: trust
+    # networks:
+    #   - my-network
+  
+  # prisma:
+  #   image: node:latest
+  #   volumes:
+  #     - .:/app
+  #   working_dir: /app
+  #   depends_on:
+  #     - postgres
+  #   environment:
+  #     DATABASE_URL: postgresql://postgres:threads@threads-db:5432/threads
+  #   command: npx prisma migrate dev --name init && npx prisma generate
+  #   networks:
+  #     - my-network
 
 volumes:
   postgres_data:

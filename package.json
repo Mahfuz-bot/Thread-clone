@@ -1,23 +1,30 @@
 {
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "@prisma/client": "^5.20.0",
+    "@types/dotenv": "^8.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "graphql": "^16.9.0",
+    "init": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.7.5",
+    "prisma": "^5.20.0",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.6.3"
+  },
   "name": "thread-clone",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "scripts": {
     "start": "node build/index.js",
     "dev": "tsc-watch --onSuccess \"npm start\""
   },
-  "dependencies": {
-    "@apollo/server": "^4.11.0",
-    "cors": "^2.8.5",
-    "express": "^4.21.1",
-    "graphql": "^16.9.0"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "tsc-watch": "^6.2.0",
-    "typescript": "^5.6.3"
-  }
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
